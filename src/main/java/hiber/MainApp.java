@@ -31,7 +31,10 @@ public class MainApp {
          System.out.println();
       }
 
-      System.out.println(userService.getUserByCar("MB", 600));
+      final String CAR_MODEL = "MB";
+      final int CAR_SERIES = 600;
+      System.out.printf("Find user by carModel = %s and carSeries = %s%n", CAR_MODEL, CAR_SERIES);
+      System.out.println(userService.getUserByCar(CAR_MODEL, CAR_SERIES));
 
       context.close();
    }
